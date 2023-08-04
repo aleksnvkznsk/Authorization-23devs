@@ -107,22 +107,3 @@ const FormRegister = () => {
 }
 
 export default FormRegister
-
-
-
-
-
-
-
-// <div className={style.form}>
-// <div className={style.form__container}>
-//     <h1 className={style.form__container__header}>Регистрация</h1>
-//     <input className={style.form__container__input} type="text" placeholder="Имя" required />
-//     <input className={style.form__container__input} type="text" placeholder="Фамилия" required />
-//     <input className={style.form__container__input} type="email" placeholder="email" required />
-//     <input className={style.form__container__input} type="password" placeholder="Пароль" required />
-//     <input className={style.form__container__input} type="password" placeholder="Подтверждение пароля" required />
-//     <input className={style.form__container__input} type="date" placeholder="Дата рождения" required />
-//     <button className={style.form__container__button}>Зарегестрироваться</button>
-// </div>
-// </div>

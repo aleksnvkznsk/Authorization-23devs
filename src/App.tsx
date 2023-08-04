@@ -1,9 +1,10 @@
 import './App.css'
+import Router from './navigation/router'
 
 function App() {
   return (
     <>
-     
+      <Router />
     </>
   )
 }

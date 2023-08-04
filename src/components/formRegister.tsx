@@ -8,7 +8,7 @@ const FormRegister = () => {
     });
 
     const onSubmit: SubmitHandler<IShippingField> = (data: any) => {
-        alert(`You name ${data.name}`)
+        console.log(data)
         reset()
     }
 

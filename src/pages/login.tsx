@@ -1,9 +1,9 @@
+import FormLogin from "../components/formLogin";
+
 const Login = () => {
 
     return (
-        <>
-            Login
-        </>
+        <FormLogin />
     );
 }
 

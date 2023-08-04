@@ -1,9 +1,8 @@
-const Register = () => {
+import FormRegister from "../components/formRegister";
 
+const Register = () => {
     return (
-        <>
-            Register
-        </>
+        <FormRegister />
     );
 }
 

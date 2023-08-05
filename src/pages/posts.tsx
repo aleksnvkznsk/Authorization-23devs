@@ -1,9 +1,9 @@
+import Post from "../components/post";
+
 const Posts = () => {
 
     return (
-        <>
-            Posts
-        </>
+        <Post />
     );
 }
 

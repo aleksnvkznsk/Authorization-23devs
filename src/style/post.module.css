@@ -1,8 +1,13 @@
+.stack {
+    display: flex;
+    margin: 0 auto;
+
+}
+
 .post {
     display: flex;
     flex-direction: column;
 }
-
 
 .post__buttons {
     display: flex;

@@ -1,6 +1,6 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { IShippingField } from "./form";
-import style from './../style/form.module.css';
+import style from './form.module.css';
 
 const FormLogin = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<IShippingField>({

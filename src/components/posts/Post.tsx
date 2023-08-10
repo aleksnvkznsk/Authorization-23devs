@@ -1,19 +1,29 @@
-import PaginationControlled from '../pagination/Pagination';
-import style from './post.module.css';
+import { Pagination } from '@mui/material';
 
+import { PostProps, usePagination, usePosts } from './hooks.ts';
 
+const POST_PER_PAGE = 10;
 
-const Post = () => {
+export default function Post() {
+    const { data, isLoading } = usePosts();
+    const { page, pageCount, dataByPage, onChange } = usePagination<PostProps>(
+        POST_PER_PAGE,
+        data
+    );
+
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
 
     return (
-        <div className={style.post}>
-            <div className={style.post__container}>
-                <p className={style.post__title}>title</p>
-                <p className={style.post__body}>body</p>
-            </div>
-            <PaginationControlled />
+        <div>
+            {dataByPage.map((post) => (
+                <div key={post.id}>
+                    <span>{post.title}</span>
+                    <p>{post.body}</p>
+                </div>
+            ))}
+            <Pagination count={pageCount} page={page} onChange={onChange} />
         </div>
     );
 }
-
-export default Post

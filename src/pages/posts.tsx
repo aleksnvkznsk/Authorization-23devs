@@ -1,4 +1,5 @@
-import Post from "../components/posts/post";
+import Post from "../components/posts/Post";
+
 
 const Posts = () => {
 

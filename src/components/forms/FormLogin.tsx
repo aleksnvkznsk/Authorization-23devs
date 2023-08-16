@@ -1,6 +1,8 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { IShippingField } from "./form";
 import style from './form.module.css';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useAuth } from "../../context/auth";
 
 const FormLogin = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<IShippingField>({
@@ -11,6 +13,19 @@ const FormLogin = () => {
         console.log(data)
         reset()
     }
+
+
+    const auth = useAuth();
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location?.state?.from?.pathname || '/';
+
+    const signIn = () => {
+        auth.login('test@gmail.com');
+        navigate(from, { replace: true });
+    };
 
     return (
         <div className={style.form}>
@@ -45,9 +60,12 @@ const FormLogin = () => {
                 />
                 {errors.password && <div className={style.form__container__error}>{errors.password.message}</div>}
 
-                <button className={style.form__container__button}>Войти</button>
+                <button onClick={signIn} className={style.form__container__button}>Войти</button>
             </form>
 
+            <div className={style.form__page}>
+                <p className={style.form__text}>Нету аккаунта?  <a className={style.form__href} href="/registr">зарегестрироваться</a></p>
+            </div>
         </div>
     );
 }

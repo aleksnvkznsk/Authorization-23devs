@@ -44,3 +44,26 @@
     border-radius: 30px;
     margin-top: 20px;
 }
+
+.form__container__button:hover{
+    background-color: rgb(123, 0, 223);
+    cursor: pointer;
+}
+
+.form__page{
+    display: flex;
+    margin: 0 auto;
+}
+
+.form__text{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.form__href{
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(139, 0, 255);
+}

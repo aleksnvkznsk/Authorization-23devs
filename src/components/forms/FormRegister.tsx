@@ -101,7 +101,9 @@ const FormRegister = () => {
 
                 <button className={style.form__container__button}>Зарегистрироваться</button>
             </form>
-
+            <div className={style.form__page}>
+                <p className={style.form__text}>Есть аккаунт?  <a className={style.form__href} href="/login">Войти</a></p>
+            </div>
         </div>
     );
 }
